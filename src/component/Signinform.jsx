@@ -1,45 +1,51 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SigninForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate('/signup');
+    navigate("/signup");
   };
 
   return (
-    <div className='flex flex-row justify-center gap-x-24 h-screen overflow-hidden'>
+    <div className="flex h-screen justify-center items-center bg-white p-5">
       {/* Left side - Image */}
-      <div className='max-w-100  min-w-80  flex items-center justify-center pt-6 pb-6 bg-white'>
-        <img 
-          src="/signinlogo.png" 
-          alt="TaskFleet Logo" 
-          className="max-w-full max-h-full  rounded-4xl  object-contain" 
+      <div className="w-1/2  flex items-center justify-center">
+        <img
+          src="/signinlogo.png"
+          alt="TaskFleet Logo"
+          className="w-[90%] h-[80vh] object-contain rounded-3xl "
         />
       </div>
 
       {/* Right side - Form */}
-      <div className="max-w-100 min-w-80  flex justify-center items-center  bg-white p-8">
-        <div className="w-full  min-w-full ">
-          <h1 className="text-[#26203B] text-xl font-bold mb-6 ">TaskFleet</h1>
+      <div className="w-1/2 flex items-center justify-center">
+        <div className="min-w-60  ">
           
-          <div className="flex mb-6 rounded-xl p-1 bg-gray-200">
-            <button 
-              type="button"
-              onClick={handleSignUpClick}
-              className="flex-1 py-1  text-xs text-gray-500 rounded-xl hover:bg-gray-100 transition"
-            >
-              Sign Up
-            </button>
-            <button className="flex-1 py-1  text-xs text-white bg-blue-500 rounded-xl">Sign In</button>
-          </div>
+            <h1 className="text-[#26203B] text-2xl font-bold mb-6">
+              TaskFleet
+            </h1>
+
+            <div className="flex mb-6 rounded-full p-1 bg-gray-200 min-w-10 min-h-10">
+              <button
+                type="button"
+                onClick={handleSignUpClick}
+                className="flex-1 py-1  text-xs text-gray-500 rounded-full hover:bg-gray-100 transition"
+              >
+                Sign Up
+              </button>
+              <button className="flex-1 py-1  text-xs text-white bg-blue-500 rounded-full ">
+                Sign In
+              </button>
+            </div>
           
-          <form className="space-y-2">
-            <div>
+          
+            <form className="space-y-3">
+            <div >
               <label className="block mb-1 font-medium text-xs">Email Id</label>
               <input
                 type="email"
@@ -72,21 +78,34 @@ const SigninForm = () => {
 
             <div className="my-4 text-center text-xs text-gray-500">OR</div>
 
-            <div className="flex flex-row gap-4 justify-between ">
-              <div className='p-2 flex-1 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer'>
-                <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" className="w-6 h-6" />
+            <div className="flex flex-row gap-3">
+                <div className="flex-1 p-2 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer">
+                  <img
+                    src="https://img.icons8.com/color/48/google-logo.png"
+                    alt="Google"
+                    className="w-5 h-5"
+                  />
+                </div>
+                <div className="flex-1 p-2 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=30840&format=png&color=000000"
+                    alt="Apple"
+                    className="w-5 h-5"
+                  />
+                </div>
+                <div className="flex-1 p-2 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer">
+                  <img
+                    src="https://img.icons8.com/color/48/windows-logo.png"
+                    alt="Microsoft"
+                    className="w-5 h-5"
+                  />
+                </div>
               </div>
-              <div className='p-2 flex-1 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer'>
-                <img src="https://img.icons8.com/?size=100&id=30840&format=png&color=000000" alt="Apple" className="w-6 h-6" />
-              </div>
-              <div className='p-2 flex-1 flex items-center justify-center border border-[#a192dd] rounded-xl hover:bg-gray-50 cursor-pointer'>
-                <img src="https://img.icons8.com/color/48/windows-logo.png" alt="Microsoft" className="w-6 h-6" />
-              </div>
-            </div>
           </form>
+          </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
