@@ -12,20 +12,42 @@ const SigninForm = () => {
   };
 
   return (
-    <div className="flex h-screen justify-center items-center bg-white p-5">
-      {/* Left side - Image */}
-      <div className="w-1/2  flex items-center justify-center">
-        <img
-          src="/signinlogo.png"
-          alt="TaskFleet Logo"
-          className="w-[90%] h-[80vh] object-contain rounded-3xl "
-        />
-      </div>
+       <div className="flex min-h-[100vh] justify-evenly items-center   p-5">
+      
+      
+        
+        {/* Left Side - Image */}
+       <div className="min-w-200 min-h-170 flex items-center justify-center ">
 
-      {/* Right side - Form */}
-      <div className="w-1/2 flex items-center justify-center">
-        <div className="min-w-60  ">
-          
+       <div className="bg-[url(./imagelogo.jpg)] bg-cover bg-center min-w-135  min-h-170 max-h-fit rounded-4xl   flex flex-col justify-between">
+      
+      <div className="flex flex-col items-center justify-center h-full pt-18">
+         <div className="text-white text-4xl font-bold">WELCOME TO TASKFLEET</div>
+        <div className="text-white text-lg pt-3 ">Your Gateway to Effortless Management</div>
+      </div>
+        
+
+        <div className="flex flex-col items-center justify-center h-full pb-10">
+           <div className="text-white text-4xl ">Seamless Collaboration</div>
+          <div className="text-white text-xl pt-6">Effortless work together with your</div>
+           <div className="text-white text-xl pb-6">team in real time.</div>
+           <div className="text-white text-3xl font-bold ">---</div>
+        </div>
+        </div>
+
+        </div> 
+
+
+
+
+
+
+
+
+        {/* Right Side - Form */}
+        <div className="min-w-1/2 min-h-160 flex items-center  justify-center ">
+          <div className="min-w-60 min-h-160 ">
+          <div>
             <h1 className="text-[#26203B] text-2xl font-bold mb-6">
               TaskFleet
             </h1>
@@ -42,32 +64,33 @@ const SigninForm = () => {
                 Sign In
               </button>
             </div>
-          
-          
-            <form className="space-y-3">
-            <div >
-              <label className="block mb-1 font-medium text-xs">Email Id</label>
-              <input
-                type="email"
-                placeholder="Enter Email"
-                className="w-full px-3 py-2 border rounded text-xs focus:outline-none focus:ring-2 focus:ring-blue-400 border-[#a192dd]"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
+          </div>
 
-            <div>
-              <label className="block mb-1 font-medium text-xs">Password</label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                className="w-full px-3 py-2 border border-[#a192dd] rounded text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
+          <div className="mt-20 "> 
+            <form className="space-y-3">
+              <div >
+                <label className="block mb-1 font-medium text-xs">Email Id</label>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  className="w-full px-3 py-2 border rounded text-xs focus:outline-none focus:ring-2 focus:ring-blue-400 border-[#a192dd]"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block mb-1 font-medium text-xs">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  className="w-full px-3 py-2 border border-[#a192dd] rounded text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
 
             <button
               type="submit"
@@ -105,7 +128,7 @@ const SigninForm = () => {
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
