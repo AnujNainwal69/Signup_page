@@ -1,9 +1,10 @@
-import React from 'react';
-import SignupForm from './component/SignupForm'; 
+import React from 'react'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SigninForm from './component/Signinform';
+
 import TeamPage from './component/Teampage';
 import CustomizationForm from './component/CustomizationForm';
+import AuthForm from './component/AuthForm';
+
 
 
 function App() {
@@ -11,14 +12,13 @@ function App() {
 
     <Router>
       <Routes>
-        <Route path="/signup" element={<SignupForm />} />
-         <Route path="/signin" element={<SigninForm />} />
+        <Route path="/Authform" element={<AuthForm />} />
          <Route path="/TeamPage" element={<TeamPage />} />
          <Route path="/CustomizationForm" element= {<CustomizationForm/>} />
 
       </Routes>
     </Router>
-   
+         
     
   );
 }

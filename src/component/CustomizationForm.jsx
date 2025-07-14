@@ -14,7 +14,7 @@ function CustomizationForm() {
 
   return (
     
-    <div className="bg-[#8787bc] p-6">
+    <div className="bg-[#c7c7ec] h-[100vh] p-6">
       {step === 1 && <CompanyDetails onNext = {handleNext}/>}
       {step === 2 && <Updatelogo onNext = {handleBack} onContinue = {handleNext} />}
       {step === 3 && < Accountdone onNext = {handleNext} />}
